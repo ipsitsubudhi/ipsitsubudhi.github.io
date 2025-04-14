@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Text Analysis - Ipsit Subudhi</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    .section {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    textarea {
+      width: 100%;
+      height: 300px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 15px;
+      background-color: #2980b9;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #1abc9c;
+    }
+
+    .results {
+      background-color: #ecf0f1;
+      padding: 15px;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Text Analysis</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="education.html">Education</a>
+      <a href="skills.html">Technical Skills</a>
+      <a href="cv.html">My CV</a>
+    </nav>
+  </header>
+
+  <div class="section">
+    <h2>Enter Text for Analysis</h2>
+    <textarea id="textInput"></textarea>
+    <br />
+    <button onclick="performTextAnalysis()">Analyze Text</button>
+  </div>
+
+  <div class="results" id="results">
+    <h2>Results</h2>
+    <p id="letterCount"></p>
+    <p id="wordCount"></p>
+    <p id="spaceCount"></p>
+    <p id="newlineCount"></p>
+    <p id="specialSymbolsCount"></p>
+    <h3>Pronouns Count</h3>
+    <pre id="pronounsCount"></pre>
+    <h3>Prepositions Count</h3>
+    <pre id="prepositionsCount"></pre>
+    <h3>Indefinite Articles Count</h3>
+    <pre id="articlesCount"></pre>
+  </div>
+
+  <script src="scripts/text-analysis.js"></script>
+  <script src="scripts/event.js"></script>
+
+</body>
+</html>
+

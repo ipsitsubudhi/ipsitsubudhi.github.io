@@ -3,42 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ipsit Subudhi - Home</title>
+  <title>Ipsit Subudhi - Personal Website</title>
   <link rel="stylesheet" href="css/style.css" />
   <style>
-    header {
-      background-color: #2c3e50;
-      padding: 15px 20px;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-radius: 10px;
-      margin-bottom: 30px;
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      line-height: 1.6;
+      background: #f4f4f4;
+      color: #333;
     }
-
-    header h1 {
-      margin: 0;
-      font-size: 24px;
-    }
-
-    nav a {
-      color: white;
-      margin-left: 20px;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    /* Uniform image styling */
-    .about-images img {
-      width: 200px;
-      height: 150px;
-      object-fit: cover;
+    img {
+      max-width: 200px;
+      height: auto;
       border-radius: 10px;
       margin: 10px 10px 10px 0;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    a {
+      color: #2980b9;
+    }
+    .section {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    nav a {
+      margin-right: 15px;
     }
   </style>
 </head>
@@ -47,6 +42,7 @@
   <header>
     <h1>Ipsit Subudhi</h1>
     <nav>
+      <a href="input.html">Text Analysis</a> <!-- Link to the Text Analysis Page -->
       <a href="education.html">Education</a>
       <a href="skills.html">Technical Skills</a>
       <a href="cv.html">My CV</a>
@@ -58,16 +54,38 @@
     <p>
       Hello! I'm a passionate tech enthusiast originally from Bhubaneswar. I love exploring new technologies and solving real-world problems through code.
     </p>
-    
-    <div class="about-images">
-      <img src="images/profile.jpg" alt="Profile Picture" />
-      <img src="images/local1.jpg" alt="Birthplace Photo 1" />
-      <img src="images/local2.jpg" alt="Birthplace Photo 2" />
-      <img src="images/local3.jpg" alt="Local Photo 3" />
-    </div>
+    <img src="images/profile.jpg" alt="Profile Picture" />
+    <img src="images/local1.jpg" alt="Birthplace Photo 1" />
+    <img src="images/local2.jpg" alt="Birthplace Photo 2" />
+    <img src="images/local3.jpg" alt="Local Photo 3" />
   </div>
 
-  <script src="scripts/event.js"></script>
+  <div class="section">
+    <h2>Education</h2>
+    <ul>
+      <li>Bachelor's Degree in Computer Science, IIIT Hyderabad, 2025</li>
+      <li>High School: DDPS, Kota, 2024</li>
+    </ul>
+    <p>Achievements:</p>
+    <ul>
+      <li>Good JEE Mains Rank</li>
+      <li>Average CGPA in 1st year 1st Sem</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Technical Skills</h2>
+    <ul>
+      <li><strong>Expert:</strong> C, C++</li>
+      <li><strong>Intermediate:</strong> Python, Git</li>
+      <li><strong>Beginner:</strong> Node, SQL, CSS, Javascript</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>My CV</h2>
+    <p>You can view or download my resume here: <a href="files/cv.pdf" target="_blank">Download CV (PDF)</a></p>
+  </div>
 
 </body>
 </html>
