@@ -6,7 +6,7 @@
   <title>Ipsit Subudhi - Home</title>
   <link rel="stylesheet" href="css/style.css" />
   <style>
-    /* Extra styles specific to the top nav */
+    /* Top navigation bar */
     header {
       background-color: #2c3e50;
       padding: 15px 20px;
@@ -32,6 +32,15 @@
     nav a:hover {
       text-decoration: underline;
     }
+
+    /* Uniform image styling */
+    .about-images img {
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin: 10px 10px 10px 0;
+    }
   </style>
 </head>
 <body>
@@ -50,10 +59,13 @@
     <p>
       Hello! I'm a passionate tech enthusiast originally from Bhubaneswar. I love exploring new technologies and solving real-world problems through code.
     </p>
-    <img src="images/profile.jpg" alt="Profile Picture" />
-    <img src="images/local1.jpg" alt="Birthplace Photo 1" />
-    <img src="images/local2.jpg" alt="Birthplace Photo 2" />
-    <img src="images/local3.jpg" alt="Local Photo 3" />
+    
+    <div class="about-images">
+      <img src="images/profile.jpg" alt="Profile Picture" />
+      <img src="images/local1.jpg" alt="Birthplace Photo 1" />
+      <img src="images/local2.jpg" alt="Birthplace Photo 2" />
+      <img src="images/local3.jpg" alt="Local Photo 3" />
+    </div>
   </div>
 
 </body>
