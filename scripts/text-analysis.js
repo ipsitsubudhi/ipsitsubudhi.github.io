@@ -1,19 +1,19 @@
-function analyzeText() {
-  const text = document.getElementById("text-input").value;
+function performTextAnalysis() {
+  const text = document.getElementById("textInput").value.trim();
 
   // Calculate basic metrics
   const letters = text.replace(/[^a-zA-Z]/g, '').length;
   const words = text.split(/\s+/).filter(word => word.length > 0).length;
   const spaces = (text.match(/\s/g) || []).length;
   const newlines = (text.match(/\n/g) || []).length;
-  const specialSymbols = text.replace(/[a-zA-Z0-9\s\n]/g, '').length;
+  const specialSymbols = (text.match(/[^\w\s]/g) || []).length;
 
   // Display results conditionally
-  document.getElementById("letters").textContent = letters ? `Letters: ${letters}` : '';
-  document.getElementById("words").textContent = words ? `Words: ${words}` : '';
-  document.getElementById("spaces").textContent = spaces ? `Spaces: ${spaces}` : '';
-  document.getElementById("newlines").textContent = newlines ? `Newlines: ${newlines}` : '';
-  document.getElementById("special-symbols").textContent = specialSymbols ? `Special Symbols: ${specialSymbols}` : '';
+  document.getElementById("letterCount").textContent = letters ? `Letters: ${letters}` : '';
+  document.getElementById("wordCount").textContent = words ? `Words: ${words}` : '';
+  document.getElementById("spaceCount").textContent = spaces ? `Spaces: ${spaces}` : '';
+  document.getElementById("newlineCount").textContent = newlines ? `Newlines: ${newlines}` : '';
+  document.getElementById("specialSymbolsCount").textContent = specialSymbols ? `Special Symbols: ${specialSymbols}` : '';
 
   // Pronouns Group
   const pronouns = ["I", "me", "my", "you", "your", "he", "him", "his", "she", "her", "hers", "it", "its", "we", "us", "our", "they", "them", "their"];
@@ -26,9 +26,9 @@ function analyzeText() {
   });
   let pronounsOutput = '';
   for (const [pronoun, count] of Object.entries(pronounsCount)) {
-    pronounsOutput += `${pronoun}: ${count}<br>`;
+    pronounsOutput += `${pronoun}: ${count}\n`;
   }
-  document.getElementById("pronouns-count").innerHTML = pronounsOutput || 'No pronouns found.';
+  document.getElementById("pronounsCount").textContent = pronounsOutput || 'No pronouns found.';
 
   // Prepositions Group
   const prepositions = ["in", "on", "at", "by", "with", "about", "under", "over", "between", "through", "during", "for"];
@@ -41,9 +41,9 @@ function analyzeText() {
   });
   let prepositionsOutput = '';
   for (const [preposition, count] of Object.entries(prepositionsCount)) {
-    prepositionsOutput += `${preposition}: ${count}<br>`;
+    prepositionsOutput += `${preposition}: ${count}\n`;
   }
-  document.getElementById("prepositions-count").innerHTML = prepositionsOutput || 'No prepositions found.';
+  document.getElementById("prepositionsCount").textContent = prepositionsOutput || 'No prepositions found.';
 
   // Indefinite Articles Group
   const articles = ["a", "an"];
@@ -56,8 +56,7 @@ function analyzeText() {
   });
   let articlesOutput = '';
   for (const [article, count] of Object.entries(articlesCount)) {
-    articlesOutput += `${article}: ${count}<br>`;
+    articlesOutput += `${article}: ${count}\n`;
   }
-  document.getElementById("articles-count").innerHTML = articlesOutput || 'No indefinite articles found.';
+  document.getElementById("articlesCount").textContent = articlesOutput || 'No indefinite articles found.';
 }
-
